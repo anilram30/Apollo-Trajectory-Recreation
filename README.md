@@ -1,5 +1,6 @@
 # The First Kalman Filter to Fly — Apollo free-return LKF reconstruction
 
+📖 **[Read the full story →](https://anilram30.github.io/Apollo-Trajectory-Recreation/)**
 A learning project: the linearized Kalman filter of NASA TR R-135 (Smith,
 Schmidt & McGee, 1962) — the first practical application of the Kalman
 filter — reimplemented in MATLAB and flown over a complete Earth → Moon →
