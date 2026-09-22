@@ -1,3 +1,4 @@
+% Full project background: https://anilram30.github.io/Apollo-Trajectory-Recreation/
 function R = apollo_lkf_mission()
 %APOLLO_LKF_MISSION  Circumlunar free-return navigation with the first
 %   spaceflight Kalman filter, reconstructed from the original sources.
