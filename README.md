@@ -7,6 +7,8 @@ Earth ballistic free-return mission. Companion report:
 `Apollo_LKF_Report.pdf` (the full story, mathematics, design decisions and
 original NASA sources).
 
+<img width="800" height="450" alt="Apollo_FreeReturn_LKF-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/0d48449c-3fa5-4c8d-a2f2-8a116486d8dc" />
+
 Author: Sreeram Anil.
 
 ## Files
