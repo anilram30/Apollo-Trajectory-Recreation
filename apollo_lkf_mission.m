@@ -444,14 +444,14 @@ for k = k_meas
     % --- Earth angles (drop when Moon occults the Earth LOS) -------------
     if ~occulted_(r, rM(:,k), C)
         hE = angles_(r, C.R0 + cfg.b_horizon);
-        zb = [zb; hE];  bb = [bb; [1;1;1]];       %#ok<AGROW>
+        zb = [zb; hE];  bb = [bb; [1;1;1]];      
     else
         MEAS.n_occulted = MEAS.n_occulted + 3;
     end
     % --- Moon angles inside the sphere of influence -----------------------
     if norm(r - rM(:,k)) < C.SOI_M
         hM = angles_(r - rM(:,k), C.R_M);
-        zb = [zb; hM];  bb = [bb; [2;2;2]];       %#ok<AGROW>
+        zb = [zb; hM];  bb = [bb; [2;2;2]];     
     end
     if ~isempty(zb)
         MEAS.k{k}    = k;
@@ -644,7 +644,7 @@ function seed_(s)
 try
     rng(s);
 catch
-    randn('state', s);  rand('state', s);       %#ok<RAND>
+    randn('state', s);  rand('state', s);      
 end
 end
 
