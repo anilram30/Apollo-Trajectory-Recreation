@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  octave:
+    name: Octave validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install GNU Octave
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y octave
+
+      - name: Check Octave version
+        run: octave --version
+
+      - name: Run Apollo LKF mission
+        run: |
+          octave --no-gui --quiet --eval "R = apollo_lkf_mission();"
+
+      - name: Verify result file
+        run: |
+          test -f apollo_lkf_results.mat
+          echo "Apollo trajectory simulation completed successfully."
+
+      - name: Check generated figures
+        run: |
+          test -f fig1_trajectory.png
+          test -f fig2_amplification.png
+          test -f fig3_lkf_errors.png
+          test -f fig4_ekf_errors.png
+          test -f fig5_parameters.png
+          test -f fig6_innovations.png
+          echo "All expected figures generated."
